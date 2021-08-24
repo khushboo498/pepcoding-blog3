@@ -2,7 +2,7 @@ body{
     margin:0;
     padding: 0;
     font-size: 16px;
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 /*for all*/
@@ -11,7 +11,8 @@ body{
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 35px;
-    font-family: 'Lato', sans-serif;
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 .heading1::before {
@@ -38,7 +39,7 @@ body{
     line-height: 1.2;
     margin-top: 15px;
     margin-bottom: 30px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 
@@ -58,7 +59,7 @@ body{
     line-height: 1.2;
     margin: 15px 0;
    /* margin-left: 10px;*/
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 .paragraph{
@@ -70,7 +71,7 @@ body{
     position: relative;
 }
 .content-style{
-	box-shadow: 0px 10px 20px 0px rgb(0 0 215 / 20%);
+	box-shadow: 0px 10px 20px 0px rgb(0 0 215 / 10%);
     padding: 10px 20px;
 }
 /*navigation-bar*/
@@ -150,39 +151,54 @@ body{
     font-size: 15px;
 }
 .small-screen-nav {
-    width: 40%;
-    /*padding-top: 200px;*/
-    top: 7%;
+   width: 40%;
+    height: 100vh;
+    overflow: scroll;
+    /* padding-top: 200px; */
+    top: 1%;
     right: 0;
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 100;
 }
 
 
 .small-nav-bar {
+	position: relative;
     display: flex;
+    height: 100%;
+    width: 100%;
     text-align: center;
     flex-direction: column;
     background: #fff;
 
 }
-.small-nav-bar a {
+#cut {
+       /* display: block; */
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 14px;
+    font-size: 21px;
+}
+.small-nav-bar>a {
     color: #000;
     text-decoration: none;
     opacity: 0.6;
     padding: 12px 0;
     border-bottom: 1px solid #000;
 }
-.small-nav-bar a:hover {
+.small-nav-bar .cross {
+    color: #000;
+}
+.small-nav-bar>a:hover {
     background-color: #EAEAEA;
     font-size: 16px;
 }
 
 /*banner*/
 .banner {
-    padding-top: 120px;
-    background-color: #fff
+    padding-top: 100px;
+    background-color: #fff;
     position: relative;
     /*background-image: url(./image/background.jpg);*/
     /*background-position: left;*/
@@ -206,13 +222,14 @@ body{
 
 
 .banner-title {
-    font-family: 'Alumni Sans', sans-serif;
-    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 82px;
     font-weight: 600;
     color: #CE202A;
     /*left: 55px;*/
     position: relative;
     animation: title 0.5s ease-in-out ;
+    z-index: 40;
 }
 
 @keyframes title{
@@ -227,7 +244,7 @@ body{
 }
 
 .author {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: #7A7677;
     font-size: 22px;
     font-weight: 600;
@@ -398,16 +415,16 @@ body{
 .banner-image .small-image {
     position: relative;
     overflow: hidden;
-    padding: 22% 0;
+    padding: 25% 0;
     display: none;
 }
 .banner-image .small-image .man {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    right: 0;
-    object-fit: cover;
+    top: 0%;
+    right: 10%;
+    object-fit: contain;
     z-index: 30;
 }
 /*main-head */
@@ -515,10 +532,7 @@ body{
         font-size: 68px;
         font-weight: 600;
     }
-    .banner-image img {
-        top: -23px;
-        left: 13%;
-    }
+    
 }
 @media screen and (max-width: 992px){
     body {
@@ -548,9 +562,25 @@ body{
         font-size: 20px;
         font-weight: 600;
     }
-    .banner-image {
-        display: none;
+    .banner-image.banner-image .almira {
+    	display: none;
     }
+    .banner-image .watch {
+    	display: none;
+    }
+    .banner-image .table{
+    	display: none;
+    }
+    .banner-image .girl{
+    	display: none;
+    }
+    .banner-image .laptop{
+    	display: none;
+    }
+    .banner-image .small-image {
+	    width: 100%;
+	    display: block;
+	}
     .banner-text {
         width: 100%;
     }   
@@ -586,9 +616,25 @@ body{
     .date {
         font-size: 12px;
     }
-     .banner-image {
-        display: none;
+    .banner-image.banner-image .almira {
+    	display: none;
     }
+    .banner-image .watch {
+    	display: none;
+    }
+    .banner-image .table{
+    	display: none;
+    }
+    .banner-image .girl{
+    	display: none;
+    }
+    .banner-image .laptop{
+    	display: none;
+    }
+    .banner-image .small-image {
+	    width: 100%;
+	    display: block;
+	}
     .banner-text {
         width: 100%;
     } 
@@ -630,9 +676,25 @@ body{
     .date {
         font-size: 10px;
     }
-     .banner-image {
-        display: none;
+    .banner-image.banner-image .almira {
+    	display: none;
     }
+    .banner-image .watch {
+    	display: none;
+    }
+    .banner-image .table{
+    	display: none;
+    }
+    .banner-image .girl{
+    	display: none;
+    }
+    .banner-image .laptop{
+    	display: none;
+    }
+    .banner-image .small-image {
+	    width: 100%;
+	    display: block;
+	}
     .banner-text {
         width: 100%;
     } 
